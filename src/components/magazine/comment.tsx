@@ -316,21 +316,13 @@ const InputContainer = styled.div`
 `;
 
 const ReplyContainer = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 32px;
-  align-content: center;
-  flex-wrap: wrap;
-  padding-top: 72px; */
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 32px;
 
-  max-width: 634px;
+  width: 634px;
   min-height: 745px;
 `;
 
@@ -393,4 +385,5 @@ const Container = styled.div`
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 `;

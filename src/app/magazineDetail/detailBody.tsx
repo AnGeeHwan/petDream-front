@@ -57,6 +57,7 @@ const CommentContainer = styled.div`
   gap: 40px;
   width: 100%;
   padding-top: 100px;
+  align-items: center;
 `;
 
 const CardRowContainer = styled.div`
@@ -93,6 +94,7 @@ const RecommandContainer = styled.div`
   gap: 40px;
   width: 100%;
   padding-top: 100px;
+  justify-content: center;
 `;
 
 const ContentContainer = styled.div`
