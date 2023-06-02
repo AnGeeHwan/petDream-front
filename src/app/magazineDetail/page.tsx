@@ -31,4 +31,17 @@ const FullContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  width: 1920px;
+
+  @media screen and (max-width: 1024px) {
+    width: 1024px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (max-width: 375px) {
+    width: 375px;
+  }
 `;

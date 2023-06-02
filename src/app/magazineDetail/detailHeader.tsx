@@ -12,13 +12,13 @@ export default function DetailHeader() {
   return (
     <HeaderContainer>
       <TopHeaderContainer>
-        <div
+        <TopImageContainer
           onClick={() => {
             router.push("/");
           }}
         >
           <Image alt="petDream" src={petDreamImage} width={168} height={35} />
-        </div>
+        </TopImageContainer>
         <TopProfileContainer
           onClick={() => {
             router.push("/myPage");
@@ -27,14 +27,24 @@ export default function DetailHeader() {
           profile
         </TopProfileContainer>
       </TopHeaderContainer>
-      {/* <MagazineContainer>
-        <div>
-          <Image alt="magazine" src={magazineImage} width={249} />
-        </div>
-      </MagazineContainer> */}
     </HeaderContainer>
   );
 }
+
+const TopImageContainer = styled.div`
+  margin-left: 320px;
+  @media screen and (max-width: 1024px) {
+    margin-left: 48px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: 32px;
+  }
+
+  @media screen and (max-width: 375px) {
+    margin-left: 24px;
+  }
+`;
 
 const MagazineContainer = styled.div`
   padding-top: 47px;
@@ -47,7 +57,9 @@ const TopHeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
   /* padding: 38px 100px 0 100px; */
 `;
 
@@ -63,12 +75,25 @@ const TopProfileContainer = styled.div`
   width: 106px;
   height: 32px;
   color: #ffffff;
+
+  margin-right: 320px;
+  @media screen and (max-width: 1024px) {
+    margin-right: 48px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-right: 32px;
+  }
+
+  @media screen and (max-width: 375px) {
+    margin-right: 24px;
+  }
 `;
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 32px 360px;
+  padding: 32px 0;
   gap: 8px;
 
   position: relative;
